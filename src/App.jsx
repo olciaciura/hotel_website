@@ -1,23 +1,29 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Dashboard from "./pages/Dashboard";
-import Agent from "./pages/Agent";
-import Login from "./pages/Login";
-import Statistic from "./pages/Statistic";
-import Tickets from "./pages/Tickets";
+import Information from "./pages/Information";
+import Home from "./pages/Home";
+import Galery from "./pages/Galery";
+import Okolica from "./pages/Okolica";
+import About_me from './pages/About_me';
+import Offer from './pages/Offer';
+import Cennik from './pages/Cennik';
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
   return (
     <div className="App">
        <BrowserRouter>
-        <Routes>
+        <ScrollToTop />
+        <Routes>  
           <Route path="/" element={<Layout />}>
-            <Route path="login" element={<Login />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="agent" element={<Agent />} />
-            <Route path="statistic" element={<Statistic />} />
-            <Route path="tickets" element={<Tickets />} />
+            <Route path="home" element={<Home />} />
+            <Route path="o_mnie" element={<About_me/>} />
+            <Route path="oferta" element={<Offer/>} />
+            <Route path="cennik" element={<Cennik/>} />
+            <Route path="przydatne_informacje" element={<Information/>} />
+            <Route path="galeria" element={<Galery/>} />
+            <Route path="okolica" element={<Okolica/>} />
           </Route>
         </Routes>
       </BrowserRouter>

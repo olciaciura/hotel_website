@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-page{
+  width: 100%;
   min-height: 100vh;
+}
+
+#header{
+  height: fit-content;
+  background-color: white;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: darkgrey;
+  z-index: 2;
+}
+
+.navbar-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navbar-icon{
+  width: 150px;
+  aspect-ratio: 1/1;
+  background-color: aquamarine;
+}
+
+nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;  
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav>ul {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav>ul>li {
+  width: 18%;
+  display: block;
+  padding: 10px 15px;
+}
+
+nav>ul>li:hover,nav>ul>li:focus {
+  text-decoration: none;
+  background-color: #eee
+}
+
+#footer{
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+  padding-bottom: 20px;
+}
+
+.footer-container{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer-container>p{
+  width: 100%;
+  text-align: left;
+}
+
+#title{
+  border-bottom: 1px solid rgba(180, 54, 54, 0.1);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#page{
+  position: relative;
+  height: fit-content;
+  width: 100%;
+}
+
+#page>p{
+  padding: 15px;
+  text-align: left; 
+}
+
+#app-body{
+  height: calc(100% - 170px);
+  position: absolute;
+  top: 170px;
+  width: 100%;
 }
