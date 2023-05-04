@@ -22,7 +22,7 @@ function App() {
             <Route path="oferta" element={<Offer/>} />
             <Route path="cennik" element={<Cennik/>} />
             <Route path="przydatne_informacje" element={<Information/>} />
-            <Route path="galeria" element={<Galery/>} />
+            <Route path="galeria" element={<Galery />} />
             <Route path="okolica" element={<Okolica/>} />
           </Route>
         </Routes>
