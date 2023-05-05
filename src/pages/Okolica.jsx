@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 
 export function Okolica(){
 
-    const [okolicaState, setOkolicaState] = useState([]);
+    const [okolicaState, setOkolicaState] = useState('');
     const [bigPhoto, setBigPhoto] = useState({'id': null, 'fileName': null})
 
     const path = '/okolica_photos'
@@ -31,24 +31,28 @@ export function Okolica(){
             {  
                 okolicaState == 'big' && <>
                             <div className="overlay">
-                                <button id="close" onClick={() => setOkolicaState('')}>X</button>
                                 <button id="left" onClick={() => {
-                                    setBigPhoto(current => {
-                                        let index = ( current.id +nr - 1 ) % nr
-                                        current.id = index
-                                        current.fileName = fileNames[index]
-                                        return current
-                                    })
-                                }}>lewo</button>
+                                    let index = ( bigPhoto.id + nr - 1 ) % nr
+                                    let temp = {
+                                        'id': index,
+                                        'fileName': fileNames[index]
+                                    }
+                                    setBigPhoto(temp)
+                                    setGaleryState(bigPhoto.id)
+                                }}>{'<'}</button>
                                 <button id="right" onClick={() => {
-                                    setBigPhoto(current => {
-                                        let index = ( current.id + 1 ) % nr
-                                        current.id = index
-                                        current.fileName = fileNames[index]
-                                        return current
-                                    })
-                                }}>prawo</button>
-                                <img key={bigPhoto.id} src={bigPhoto.fileName}  alt={`Photo: ${bigPhoto.fileName}`}/>
+                                    let index = ( bigPhoto.id + 1 ) % nr_1
+                                    let temp = {
+                                        'id': index,
+                                        'fileName': fileNames[index]
+                                    }
+                                    setBigPhoto(temp)
+                                    setGaleryState(bigPhoto.id)
+                                }}>{'>'}</button>
+                                <div className="bigPhoto">
+                                    <button id="close" onClick={() => setGaleryState('')}>X</button>
+                                    <img class='big' key={bigPhoto.id} src={bigPhoto.fileName}  alt={`Photo: ${bigPhoto.fileName}`}/>
+                                </div>
                             </div>
                         </>
             }
