@@ -2,6 +2,7 @@ import React from "react";
 import {Outlet} from "react-router-dom";
 import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
+import { Link } from "react-router-dom";
 
 function Layout() {
   return (
@@ -9,8 +10,9 @@ function Layout() {
         <div id='header'>
             <div className="navbar-container">
                 <div className="navbar-icon">
-                    {/* tu ikonka? */}
-                    IKONA
+                    <Link to="/home">
+                        <img className="logo" src='../../public/logo.png' alt='logo'/>
+                    </Link>
                 </div>
                 <Navbar />
             </div>
