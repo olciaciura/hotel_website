@@ -51,7 +51,7 @@ export function Galery(){
             <div className="images">
             {
                 fileNames1.map((fileName, index) => (
-                    <img key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
                         setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
                         setGaleryState('big1');                    
                     }}/>
@@ -62,7 +62,7 @@ export function Galery(){
             <div className="images">
             {
                 fileNames2.map((fileName, index) => (
-                    <img key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
                         setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
                         setGaleryState('big2');                    
                     }}/>
@@ -73,7 +73,7 @@ export function Galery(){
             <div className="images">
             {
                 fileNames3.map((fileName, index) => (
-                    <img key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
                         setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
                         setGaleryState('big3');                    
                     }}/>

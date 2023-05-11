@@ -11,7 +11,7 @@ function Navbar() {
           <Link to="/home">Home</Link>
         </li>
         <li>
-          <Link to="/o_mnie">O mnie</Link>
+                <a href="#about_me"> <button>O mnie</button> </a>
         </li>
         <li>
           <Link to="/oferta">Oferta</Link>
@@ -28,7 +28,9 @@ function Navbar() {
         <li>
           <Link to="/okolica">Okolica</Link>
         </li>
-        <a href="#footer"> <button>Kontakt</button> </a>
+        <li>    
+                <a href="#footer"> <button>Kontakt</button> </a>
+        </li>
       </ul>
     </nav>
   );

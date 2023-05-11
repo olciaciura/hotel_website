@@ -4,7 +4,7 @@ export function Home(){
     return(
         <div id='page'>
             <div className="background_img">
-                <img className="background_img" src={'../../public/main.png'}/> 
+                <img className="background_img" src={'../../main.png'}/> 
             </div>
                 <p>Ciągle w biegu i niedoczasie… Czas pędzi… życie pędzi… i my też nieustannie pędzimy…
                 <br/><br/>
@@ -15,6 +15,11 @@ export function Home(){
                 <br/>Kotlina Kłodzka, Góry Złote, Stary Gierałtów - mam nadzieję, że nurt pędzącego życia wyrzuci Was na brzeg Białej Lądeckiej w tym właśnie miejscu – choćby na Chwilę… Moment 😊 
                 <br/><br/><span id='do_prawej'>Jola</span> <br/>
                 </p>
+            <div className="background_img">
+                <img className="background_img" id="about_me" src={'../../panorama.jpg'}/> 
+                <p id="about_me">O mnie</p>
+            </div>
+                <p>Cześć, mam na imię Jola. Kilkanaście lat temu przypadek sprawił, że przyjechałam do Starego Gierałtowa i zakochałam się w tym miejscu. Od tego czasu spędzam tu każdą wolną chwilę. To moje miejsce na ziemi. Chcę się z Wami podzielić tym niezwykłym dla mnie zakątkiem świata. Zapraszam Was serdecznie do Kotliny Kłodzkiej, nad brzeg Białej Lądeckiej, do ciszy i spokoju, pięknych krajobrazów i dobrej energii Starego Gierałtowa</p>
         </div>
     )
 }

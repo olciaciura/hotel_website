@@ -2,63 +2,58 @@ import React, {useEffect, useState} from "react";
 
 export function Okolica(){
 
-    const [okolicaState, setOkolicaState] = useState('');
-    const [bigPhoto, setBigPhoto] = useState({'id': null, 'fileName': null})
-
     const path = '/okolica_photos'
-    const nr = 11
+    const nr = 3
     const [fileNames, setFileNames] = useState([])
+    const place = [['Zakopane', 'Karkonosze'], ['Bieszczady']]
+    const opis = [ [ 'popularne miejsce w Tatrach, znane z pięknych krajobrazów, licznych szlaków turystycznych i bogatej kultury góralskiej. Można tu podziwiać malownicze widoki, wspinac się na szczyty, relaksować się w termach, a także spróbować tradycyjnych góralskich potraw', 
+                    'pasmo górskie na granicy polsko-czeskiej, z pięknymi szlakami turystycznymi i malowniczymi wodospadami. W Karkonoszach znajdują się również kurorty wypoczynkowe, w których można odpocząć i zrelaksować się w pięknych okolicznościach przyrody.'], 
+                    ['dziewicze tereny na południowym wschodzie Polski, z pięknymi krajobrazami, górami, lasami i dzikimi zwierzętami. Można tu wędrować po malowniczych szlakach, kąpać się w górskich rzekach, a także poznać kulturę i tradycje miejscowych ludzi.']]
+    const link = [['https://www.youtube.com/watch?v=jRdQDTpQbLU&list=RDatvkLYluMS0&index=9', 'https://www.w3schools.com/css/css_positioning.asp'], ['http://manichatki.pl/galeria/']]
+    const short_link = [['https://www.youtube.com/', 'https://www.w3schools.com'], ['http://manichatki.pl']]
+
 
     useEffect(() => {
         setFileNames([])
         let temp = []
-        for (let i = 0; i < nr; i++) {
+        for (let i = 0; i < nr; i = i + 2) {
+            let list;
             let filename = path + '/image' + i + '.png';
-            temp.push(filename);
+            if( i + 1 < nr ){
+                let filename_1 = path + '/image' + (i + 1) + '.png';
+                list = [filename, filename_1]
+            }
+            else{
+                list = [filename, '']
+            }    
+            temp.push(list);
         }
         setFileNames(temp)
     }, [])
 
     return(
         <div id='page'>
-            <p id='title_galery'></p>
-            <div className="images">
             {
                 fileNames.map((fileName, index) => (
-                    <img key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
-                        setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
-                        setOkolicaState('big');
-                    }}/>
+                    <>
+                    <div className="place">
+                        <img id="photo" src={fileName[0]}/>
+                        <div id="place">
+                            <p id="title_galery">{place[index][0]}</p>
+                            <p>{opis[index][0]}</p>
+                            <a href={link[index][0]} target="_blank">{short_link[index][0]}</a>
+                        </div>
+                    </div>
+                    <div className="place">
+                        <div id="place">
+                            <p id="title_galery">{place[index][1]}</p>
+                            <p>{opis[index][1]}</p>
+                            <a href={link[index][1]} target="_blank">{short_link[index][1]}</a>
+                        </div>
+                        <img id="photo" src={fileName[1]}/>
+                    </div>
+                    </>
                 ))
-            }
-            </div>
-            {  
-                okolicaState != '' && <>
-                            <div className="overlay">
-                            <button id="left" onClick={() => {
-                                    let index = ( bigPhoto.id + nr - 1 ) % nr
-                                    let temp = {
-                                        'id': index,
-                                        'fileName': fileNames[index]
-                                    }
-                                    setBigPhoto(temp)
-                                    setOkolicaState(bigPhoto.id)
-                                }}>{'<'}</button>
-                                <button id="right" onClick={() => {
-                                    let index = ( bigPhoto.id + 1 ) % nr
-                                    let temp = {
-                                        'id': index,
-                                        'fileName': fileNames[index]
-                                    }
-                                    setBigPhoto(temp)
-                                    setOkolicaState(bigPhoto.id)
-                                }}>{'>'}</button>
-                                <div className="bigPhoto">
-                                    <button id="close" onClick={() => setOkolicaState('')}>X</button>
-                                    <img class='big' key={bigPhoto.id} src={bigPhoto.fileName}  alt={`Photo: ${bigPhoto.fileName}`}/>
-                                </div>
-                            </div>
-                        </>
             }
         </div>
     )
