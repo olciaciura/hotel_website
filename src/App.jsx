@@ -10,6 +10,7 @@ import Cennik from './pages/Cennik';
 import ScrollToTop from './components/scrollToTop';
 
 function App() {
+  
   return (
     <div className="App">
        <BrowserRouter>

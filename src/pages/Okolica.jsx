@@ -37,7 +37,7 @@ export function Okolica(){
                 fileNames.map((fileName, index) => (
                     <>
                     <div className="place">
-                        <img id="photo" src={fileName[0]}/>
+                        <img id="photo_place" src={fileName[0]}/>
                         <div id="place">
                             <p id="title_galery">{place[index][0]}</p>
                             <p>{opis[index][0]}</p>
@@ -50,7 +50,7 @@ export function Okolica(){
                             <p>{opis[index][1]}</p>
                             <a href={link[index][1]} target="_blank">{short_link[index][1]}</a>
                         </div>
-                        <img id="photo" src={fileName[1]}/>
+                        <img id="photo_place" src={fileName[1]}/>
                     </div>
                     </>
                 ))

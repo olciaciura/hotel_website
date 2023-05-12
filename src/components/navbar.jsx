@@ -10,9 +10,10 @@ function Navbar() {
         <li>
           <Link to="/home">Home</Link>
         </li>
-        <li>
-                <a href="#about_me"> <button>O mnie</button> </a>
-        </li>
+{/*         <li>
+                <Link to="/home#about_me"> <button>O&nbsp;mnie</button> </Link>    
+                
+        </li> */}
         <li>
           <Link to="/oferta">Oferta</Link>
         </li>
