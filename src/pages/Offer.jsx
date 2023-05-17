@@ -1,10 +1,11 @@
 import React from "react";
 
 export function Offer(){
+
     return(
         <div id='page'>
         <div className='black_header'>
-            <p id='title_galery'>Oferta</p>
+            <p id='information'>Oferta</p>
         </div>
         <div className='place'>
             <img className='offer' id='photo_place' src='../../dom.jpg'/>

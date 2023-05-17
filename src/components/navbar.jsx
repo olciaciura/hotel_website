@@ -1,36 +1,53 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
+function Navbar(props) {
 
-function Navbar() {
+        const linkToName = {
+                '/home': 'Home',
+                '/oferta': 'Oferta',
+                '/cennik': 'Cennik',
+                '/przydatne_informacje': 'Przydatne informacje',
+                '/galeria': 'Galeria',
+                '/okolica': 'Okolica'
+            }
+
+            var linkToName_list = [
+                ['/home', 'Home', null], 
+                ['/oferta', 'Oferta', null],
+                ['/cennik', 'Cennik', null],
+                ['/przydatne_informacje', 'Przydatne informacje', null],
+                ['/galeria', 'Galeria', null],
+                ['/okolica', 'Okolica', null]
+        ]
+
+//   useEffect(() => {
+//         const url = window.location.pathname
+//         for (let elem in linkToName_list){
+//                 if(linkToName_list[elem][0] == url){
+//                         linkToName_list[elem][2] = 'actual'
+//                 }
+//         }
+//         console.log(linkToName_list)
+//   }, []);
+
+
+        const handleClick = () => {
+                props.setJumpedToFooter(true)
+        }
 
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-{/*         <li>
-                <Link to="/home#about_me"> <button>O&nbsp;mnie</button> </Link>    
-                
-        </li> */}
-        <li>
-          <Link to="/oferta">Oferta</Link>
-        </li>
-        <li>
-          <Link to="/cennik">Cennik</Link>
-        </li>
-        <li>
-          <Link to="/przydatne_informacje">Przydatne informacje</Link>
-        </li>
-        <li>
-          <Link to="/galeria">Galeria</Link>
-        </li>
-        <li>
-          <Link to="/okolica">Okolica</Link>
-        </li>
+        {
+                linkToName_list.map((names, index) => (
+                <li>
+                        <Link to={linkToName_list[index][0]} id={linkToName_list[index][2]}>{linkToName_list[index][1]}</Link>
+                </li>
+                ))
+        }
         <li>    
-                <a href="#footer"> <button>Kontakt</button> </a>
+                <a href="#footer"> <button onClick={handleClick}>Kontakt</button> </a>
         </li>
       </ul>
     </nav>
