@@ -23,7 +23,7 @@ function Layout() {
         <div id='header'>
             <div className="navbar-container">
                 <div className="navbar-icon">
-                    <Link to="/home">
+                    <Link to="/">
                         <img className="logo" src='../../logo.png' alt='logo'/>
                     </Link>
                 </div>

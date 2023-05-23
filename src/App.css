@@ -233,6 +233,7 @@ nav>ul>li>a:hover,nav>ul>li>a:focus{
 
 img#photo{
   width: 23%;
+  height: auto !important;
   box-shadow: 1px 1px 2px rgb(42, 58, 53, 0.1);
   transition: transform 0.2s ease-in-out;
   border-radius: 5px;
@@ -246,8 +247,9 @@ img#photo:hover,img#photo:focus{
 
 .big{
   height: min(60vh, 60vw);
+  max-width: 91vw;
   order: 2;
-  z-index: 5;
+  z-index: 10;
   border-radius: 5px;
 }
 
@@ -277,6 +279,7 @@ img#photo:hover,img#photo:focus{
   color:rgb(247, 247, 240, 0.5);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: xx-large;
+  z-index: 1;
 }
 
 
@@ -497,6 +500,42 @@ tr#down>td{
 
 #bigger{
   font-size: large;
+}
+
+#regulamin,.pory_roku{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#regulamin>p,.pory_roku>div>p{
+  font-size: large;
+  margin-left: 4vw;
+}
+
+#regulamin>ul,.pory_roku>div>ul{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  line-height: 1.7;
+  list-style-type: circle;
+}
+
+#regulamin>ul>li,.pory_roku>div>ul>li{
+  margin-bottom: 1vh;
+}
+
+.pory_roku{
+  display: flex;
+  flex-direction: row;
+}
+
+#lato{
+  width: 50%;
+  background-image: url("../public/lato.jpg");
+  
+}
+
+#zima{
+  width: 50%;
+  background-image: url("../public/zima.jpg");
 }
 
 .active{

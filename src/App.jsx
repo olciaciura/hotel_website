@@ -7,6 +7,7 @@ import Galery from "./pages/Galery";
 import Okolica from "./pages/Okolica";
 import Offer from './pages/Offer';
 import Cennik from './pages/Cennik';
+import { Regulamin } from './pages/Regulamin';
 import ScrollToTop from './components/scrollToTop';
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
         <ScrollToTop />
         <Routes>  
           <Route path="/" element={<Layout />}>
-            <Route path="home" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="oferta" element={<Offer/>} />
             <Route path="cennik" element={<Cennik/>} />
             <Route path="przydatne_informacje" element={<Information/>} />
+            <Route path="regulamin" element={<Regulamin/>} />
             <Route path="galeria" element={<Galery />} />
             <Route path="okolica" element={<Okolica/>} />
           </Route>
