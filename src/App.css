@@ -75,7 +75,6 @@ nav>ul>li>a>button{
 nav>ul>li>a>button:hover,nav>ul>li>a>button:focus{
 
   color: white;
-  text-decoration: underline;
 }
 
 
@@ -498,4 +497,9 @@ tr#down>td{
 
 #bigger{
   font-size: large;
+}
+
+.active{
+  color: red !important;
+  text-decoration: underline;
 }

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 
 function Navbar(props) {
 
@@ -41,13 +41,15 @@ function Navbar(props) {
       <ul>
         {
                 linkToName_list.map((names, index) => (
-                <li>
-                        <Link to={linkToName_list[index][0]} id={linkToName_list[index][2]}>{linkToName_list[index][1]}</Link>
+                <li key={index} >
+                        <NavLink className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  } to={linkToName_list[index][0]} id={linkToName_list[index][2]}>{linkToName_list[index][1]}</NavLink>
                 </li>
                 ))
         }
         <li>    
-                <a href="#footer"> <button onClick={handleClick}>Kontakt</button> </a>
+                <a href="#footer" onClick={handleClick}>Kontakt</a>
         </li>
       </ul>
     </nav>
