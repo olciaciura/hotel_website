@@ -13,10 +13,11 @@ function Navbar(props) {
             }
 
             var linkToName_list = [
-                ['/home', 'Home', null], 
+                ['/', 'Home', null], 
                 ['/oferta', 'Oferta', null],
                 ['/cennik', 'Cennik', null],
                 ['/przydatne_informacje', 'Przydatne informacje', null],
+                ['/regulamin', `NIEregulamin`, null],
                 ['/galeria', 'Galeria', null],
                 ['/okolica', 'Okolica', null]
         ]
