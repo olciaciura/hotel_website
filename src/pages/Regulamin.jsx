@@ -35,26 +35,64 @@ Jeśli coś się uszkodzi/zepsuje, dajcie proszę znać, żebym mogła temu zara
             <img className='offer' id='photo_place' src='../../sugestie.jpg'/>
         </div>
 
-        <div className="praktyczne_wskazowki">
+        {/* praktyczne wskazówki */}
+        <div className='place'>     
+            <img className='offer' id='photo_place' src='../../sugestie2.jpg'/>
+            <div id='regulamin'>            
+            <p><br/><br/><b>Praktyczne wskazówki:</b>
+            <br/><br/><span id='tekst'><b>Segregacja śmieci</b>
+            <br/>przy drodze po prawej stronie stoją pojemniki na śmieci; co i gdzie wrzucamy opisane jest dokładnie w ulotce na ostatniej stronie</span>
+            
+            <br/><br/><span id='tekst'><b>Woda z kranu</b>
+            <br/>woda jest czerpana ze studni głębinowej, przebadana – można pić bezpośrednio z kranu</span>
 
+            <br/><br/><span id='tekst'><b>Zamykanie/Otwieranie drzwi tarasowych</b>
+            <br/>klamka musi być ustawiona w pozycji „na ukos” – wtedy trzymamy końcówkę klamki i drzwi przesuwają się bez większego problemu. Jeśli po dosunięciu do końca, klamka się blokuje i nie dochodzi do pozycji pionowej – nie forsujcie dalej, to znaczy, że coś poszło nie tak i trzeba powtórzyć – odsunąć ponownie drzwi i z większą energią dosunąć (trzymając za końcówkę uchwytu)</span>
+
+            <br/><br/><span id='tekst'><b>Ognisko</b>
+            <br/>możecie wykorzystać zebrany chrust pod wierzbami, a jeśli akurat nie będzie już żadnego „zapasu”, można wybrać się na spacer do lasu i po drodze pozbierać trochę patyków</span>
+
+            <br/><br/><span id='tekst'><b>Roślinki na tarasie</b>
+            <br/>nie wszyscy mają ogrodnicze zacięcie, jeśli jednak zauważycie, że akurat podczas Waszego pobytu aura dopisała, i roślinki „usychają z pragnienia”, wielka prośba o ich podlanie – najlepiej wczesnym rankiem, lub pod wieczór – może w ten sposób uda się nam wspólnie wyhodować zieloną dżunglę😊</span>
+
+            </p>
+           </div>
         </div>
 
-        <div className="pory_roku">
-        <div id='lato'>
-            <p><br/><br/><b>LETNIĄ PORĄ:</b></p>
-            <ul>
-                    <li>zwracanie uwagi na domykanie kranów, zamykanie okien/drzwi przed wyjściem (zwłaszcza w sezonie grzewczym)</li>
-                    <li>niewchodzenie na piętro w obuwiu zewnętrznym</li>
-            </ul>
-        </div>
-        <div id='zima'>
-            <p><br/><br/><b>ZIMOWĄ PORĄ:</b></p>
-            <ul>
-                    <li>elektryczne suszarki do butów i ubrań – przy ich używaniu, prośba o ich nadzorowanie: nie zostawianie włączonych urządzeń na noc, ani kiedy nie ma Was w domu, wyłączanie jeśli już wszystko co miało się wysuszyć, jest suche</li>
-            </ul>
-        </div>
+{/* dla młodszych dla palaczy i dla rowezystów */}
+        <div className='place'>     
+            <div id='regulamin'>            
+            <p><br/><br/><span id='tekst'><b>Do młodszych gości </b>
+            <br/>Jeśli jakaś książka Was zainteresuje, zaczniecie czytać i nie skończycie – możemy się umówić, że ją Wam pożyczę – odeślecie pocztą po przeczytaniu, lub oddacie przy następnych odwiedzinach, które mam nadzieję nadejdą 😊
+            <br/>Gry i zabawki z małymi elementami (np. lego) – fajnie byłoby, gdybyście po skończonej zabawie zbierali/składali wszystkie części – jeśli otoczycie je taką „rodzicielską” opieką – dłużej będą Wam służyć 😊
+            </span>
+            
+            <br/><br/><span id='tekst'><b>Dla palaczy</b>
+            <br/>palimy tylko na zewnątrz, prośba o korzystanie z popielniczek i nie wyrzucanie niedopałków „za siebie”</span>
+
+            <br/><br/><span id='tekst'><b>Dla rowerzystów</b>
+            <br/>w planach mam wiatę na rowery, tymczasem rozwiązaniem może być przypinanie rowerów na tarasie, lub wprowadzanie do przedsionka (jeśli to będzie opcja, którą wybierzecie, wielka prośba o uważność na ściany)</span>
+            </p>
+            </div>
+            <img className='offer' id='photo_place' src='../../sugestie3.jpg'/>
         </div>
 
+{/* wifi lato i zima */}
+        <div className='place'>     
+            <img className='offer' id='photo_place' src='../../sugestie4.jpg'/>
+            <div id='regulamin'>            
+            <p><br/><br/><span id='tekst'><b>Letnią porą:</b>
+            <br/>przy otwartych oknach, będą wlatywać do środka różne żyjątka – prośba o ich „pokojową” ewakuację (np. złapanie do słoika czy siatki na motyle i wypuszczenie na dwór), byłoby mi bardzo przykro, gdyby zakończyły swój żywot rozgniecione na ścianie…
+            <br/>letnie wieczory przy grillu to super sprawa, będę bardzo wdzięczna, jeśli uda się utrzymać grill i akcesoria w czystości, tak aby kolejni goście też mogli cieszyć się z możliwości grillowania </span>
+            
+            <br/><br/><span id='tekst'><b>Zimową porą:</b>
+            <br/>elektryczne suszarki do butów i ubrań – przy ich używaniu, prośba o ich nadzorowanie: nie zostawianie włączonych urządzeń na noc, ani kiedy nie ma Was w domu, wyłączanie jeśli już wszystko co miało się wysuszyć, jest suche</span>
+
+            <br/><br/><span id='tekst'><b>WI-FI</b>
+            <br/>sieć Play, hasło ……</span>
+            </p>
+            </div>
+        </div>
 
         </div>
     )

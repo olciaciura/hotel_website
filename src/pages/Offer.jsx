@@ -18,7 +18,7 @@ export function Offer(){
                 <ul>
                 <li>W każdym apartamencie maksymalnie może być 6 osób, w tym dwie na rozkładnej kanapie w salonie</li>
                 <li>Prywatnie, uwielbiam zwierzaki, ale w tym miejscu, z różnych względów, nie mogę ich niestety przyjąć</li>
-                <li>Internet –  w trakcie instalacji, światłowód powinien zostać podłączony w kwietniu b.r</li>
+                <li>Internet –  światłowód </li>
                 <li>Sieć GSM – problem z zasięgiem ma tu tylko sieć PLUS, inne sieci dobrze odbierają</li>
                 <li>Proszę o niepalenie tytoniu, ani innych używek w domu, i korzystanie z popielniczek na zewnątrz</li>
                 </ul>

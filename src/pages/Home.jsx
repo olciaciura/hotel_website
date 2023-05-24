@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export function Home(){
+
+    useEffect(() => {
+        const background_img = document.querySelector('.before_sepia');
+        background_img.style.animation = 'sepia 20s forwards';
+    }, [])
+
     return(
         <div id='page'>
-            <div className="background_img">
-                <img className="background_img" src={'../../main.png'}/> 
+            <div className="background_img" >
+                <img className='before_sepia' src={'../../main.png'}/> 
             </div>
                 <p>Ciągle w biegu i niedoczasie… Czas pędzi… życie pędzi… i my też nieustannie pędzimy…
                 <br/><br/>

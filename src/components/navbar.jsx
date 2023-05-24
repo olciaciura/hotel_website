@@ -17,7 +17,7 @@ function Navbar(props) {
                 ['/oferta', 'Oferta', null],
                 ['/cennik', 'Cennik', null],
                 ['/przydatne_informacje', 'Przydatne informacje', null],
-                ['/regulamin', `NIEregulamin`, null],
+                ['/regulamin', `Kilka zasad`, null],
                 ['/galeria', 'Galeria', null],
                 ['/okolica', 'Okolica', null]
         ]
