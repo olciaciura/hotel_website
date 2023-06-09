@@ -5,15 +5,15 @@ export function Galery(){
     const [galeryState, setGaleryState] = useState('')
     const [bigPhoto, setBigPhoto] = useState({'id': null, 'fileName': null})
 
-    const path1 = '/galery_photos/others'
-    const path2 = '/galery_photos/domek'
-    const path3 = '/galery_photos/środek'
-    const path4 = '/galery_photos/otoczenie'
+    const path1 = '/galery_photos/domek'
+    const path2 = '/galery_photos/środek'
+    const path3 = '/galery_photos/otoczenie'
+    const path4 = '/galery_photos/others'
 
-    const nr_1 = 17
-    const nr_2 = 14
-    const nr_3 = 13
-    const nr_4 = 22
+    const nr_1 = 14
+    const nr_2 = 13
+    const nr_3 = 22
+    const nr_4 = 17
 
     const [fileNames1, setFileNames1] = useState([])
     const [fileNames2, setFileNames2] = useState([])
@@ -57,47 +57,55 @@ export function Galery(){
 
     return(
         <div id='page'>
-            <p id='title_galery'>Moje uchwycone Chwile i Momenty</p>
+            <p id='title_galery'>Chwila... Moment na zewnątrz</p>
             <div className="images">
             {
                 fileNames1.map((fileName, index) => (
-                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
-                        setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
-                        setGaleryState('big1');                    
-                    }}/>
+                    <div>
+                        <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                            setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
+                            setGaleryState('big1');                    
+                        }}/>
+                    </div>
                 ))
             }
             </div>
-            <p id='title_galery'>Zdjęcia domku</p>
+            <p id='title_galery'>Chwila... Moment wnętrze</p>
             <div className="images">
             {
                 fileNames2.map((fileName, index) => (
-                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
-                        setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
-                        setGaleryState('big2');                    
-                    }}/>
-                ))
-            }
-            </div>
-            <p id='title_galery'>Wnętrze</p>
-            <div className="images">
-            {
-                fileNames3.map((fileName, index) => (
-                    <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
-                        setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
-                        setGaleryState('big3');                    
-                    }}/>
+                    <div>
+                        <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                            setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
+                            setGaleryState('big2');                    
+                        }}/>
+                    </div>
                 ))
             }
             </div>
             <p id='title_galery'>Okolica</p>
             <div className="images">
             {
+                fileNames3.map((fileName, index) => (
+                    <div>
+                        <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
+                            setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
+                            setGaleryState('big3');                    
+                        }}/>
+                    </div>
+                ))
+            }
+            </div>
+            <p id='title_galery'>Moje uchwycone Chwile i Momenty</p>
+            <div className="images">
+            {
                 fileNames4.map((fileName, index) => (
+                    <div>
                     <img id="photo" key={index} src={fileName}  alt={`Photo: ${fileName}`} onClick={() => {
                         setBigPhoto(current => {current.id = index; current.fileName = fileName; return current});
                         setGaleryState('big4');                    
                     }}/>
+                    </div>
                 ))
             }
             </div>

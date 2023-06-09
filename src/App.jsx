@@ -4,7 +4,6 @@ import Layout from "./pages/Layout";
 import Information from "./pages/Information";
 import Home from "./pages/Home";
 import Galery from "./pages/Galery";
-import Okolica from "./pages/Okolica";
 import Offer from './pages/Offer';
 import Cennik from './pages/Cennik';
 import { Regulamin } from './pages/Regulamin';
@@ -24,7 +23,6 @@ function App() {
             <Route path="przydatne_informacje" element={<Information/>} />
             <Route path="regulamin" element={<Regulamin/>} />
             <Route path="galeria" element={<Galery />} />
-            <Route path="okolica" element={<Okolica/>} />
           </Route>
         </Routes>
       </BrowserRouter>

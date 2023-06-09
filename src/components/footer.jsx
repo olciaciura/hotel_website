@@ -7,8 +7,7 @@ function Footer (props) {
             {console.log('footer:' +  props.jumpedToFooter)}
             <div className="footer-container">
                 <p id="title1">Chwila... Moment</p>
-                <p id="content">Jolanta Piecuch<br/><br/>
-                Stary Gierałtów</p>
+                <p id="content">Stary Gierałtów 39E<br/>57-550 Stary Gierałtów<br/>gmina Stronie Śląskie</p>
             </div>
             <div className="footer-container">
                 <p id="title2">Kontakt</p>

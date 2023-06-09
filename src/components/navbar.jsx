@@ -17,21 +17,9 @@ function Navbar(props) {
                 ['/oferta', 'Oferta', null],
                 ['/cennik', 'Cennik', null],
                 ['/przydatne_informacje', 'Przydatne informacje', null],
-                ['/regulamin', `Kilka zasad`, null],
-                ['/galeria', 'Galeria', null],
-                ['/okolica', 'Okolica', null]
+                ['/regulamin', `Nasza umowa`, null],
+                ['/galeria', 'Galeria', null]
         ]
-
-//   useEffect(() => {
-//         const url = window.location.pathname
-//         for (let elem in linkToName_list){
-//                 if(linkToName_list[elem][0] == url){
-//                         linkToName_list[elem][2] = 'actual'
-//                 }
-//         }
-//         console.log(linkToName_list)
-//   }, []);
-
 
         const handleClick = () => {
                 props.setJumpedToFooter(true)

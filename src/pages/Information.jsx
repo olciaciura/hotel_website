@@ -1,61 +1,59 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 export function Information(){
+    const path = '/okolica_photos'
+    const nr = 3
+    const [fileNames, setFileNames] = useState([])
+    const place = [['Zakopane', 'Karkonosze'], ['Bieszczady']]
+    const opis = [ [ 'popularne miejsce w Tatrach, znane z pięknych krajobrazów, licznych szlaków turystycznych i bogatej kultury góralskiej. Można tu podziwiać malownicze widoki, wspinac się na szczyty, relaksować się w termach, a także spróbować tradycyjnych góralskich potraw', 
+                    'pasmo górskie na granicy polsko-czeskiej, z pięknymi szlakami turystycznymi i malowniczymi wodospadami. W Karkonoszach znajdują się również kurorty wypoczynkowe, w których można odpocząć i zrelaksować się w pięknych okolicznościach przyrody.'], 
+                    ['dziewicze tereny na południowym wschodzie Polski, z pięknymi krajobrazami, górami, lasami i dzikimi zwierzętami. Można tu wędrować po malowniczych szlakach, kąpać się w górskich rzekach, a także poznać kulturę i tradycje miejscowych ludzi.']]
+    const link = [['https://www.youtube.com/watch?v=jRdQDTpQbLU&list=RDatvkLYluMS0&index=9', 'https://www.w3schools.com/css/css_positioning.asp'], ['http://manichatki.pl/galeria/']]
+    const short_link = [['https://www.youtube.com/', 'https://www.w3schools.com'], ['http://manichatki.pl']]
+
+
+    useEffect(() => {
+        setFileNames([])
+        let temp = []
+        for (let i = 0; i < nr; i = i + 2) {
+            let list;
+            let filename = path + '/image' + i + '.png';
+            if( i + 1 < nr ){
+                let filename_1 = path + '/image' + (i + 1) + '.png';
+                list = [filename, filename_1]
+            }
+            else{
+                list = [filename, '']
+            }    
+            temp.push(list);
+        }
+        setFileNames(temp)
+    }, [])
+
     return(
         <div id='page'>
-        <div className='black_header'>
-            <p id='information'>Przydatne informacje</p>
-        </div>
-
-        <div className='place'>
-            <img className='offer' id='photo_place' src='../../okolica.jpg'/>
-            <div id='place'>            
-            <p><br/><br/>Nie ma telewizji, ani telewizorów. W zamian oddaję  do Waszej dyspozycji książki, 
-                mapy i przewodniki planszówki, kredki i rysowanki, materiały plastyczne, 
-                możliwość udostępnienia różnych sprzętów przydatnych do wspólnego spędzania czasu, 
-                np. rzutnika, gitary, śpiewników, przyczepki rowerowej dla  dzieci, sanek, itp.
-                <br/><br/>Na zewnątrz duży taras, który pozwala spędzać czas na dworze w pogodę i niepogodę, 
-                teren zielony z miejscem na ognisko, hamaki i leżaki do wylegiwania się nad brzegiem rzeki
-                <br/><br/>Na wiosnę ruszy własny ogródek i zielnik – jeśli macie zacięcie ogrodnicze do 
-                grzebania w grządkach i potrzebę kontaktu z ziemią  - zapraszam do własnoręcznego siania i 
-                sadzenia roślinek, dla dzieciaków może to być super zabawa
-                <br/><br/>Ja sama uwielbiam różnorakie rękodzieło i czasami organizuję warsztaty rękodzieła – 
-                decoupage, filcowanie, wyrób świeczek, wypieki – przy grupie kilku osób (małych i dużych) 
-                możemy się na takie spotkanie z rękodziełem umówić
-                </p>
-            </div>
-
-        </div>
-
-        <div className='place'>     
-            <div id='place'>            
-            <p>
-                <br/><br/>Wspólnie i aktywnie – niezliczone możliwości: w zimie narty zjazdowe w okolicznych 
-                ośrodkach narciarskich po polskiej i czeskiej stronie, kilkadziesiąt kilometrów tras narciarstwa 
-                biegowego (jeśli jeszcze nie próbowaliście tego sportu zachęcam z całego serca, z chęcią pomogę 
-                w zorganizowaniu sprzętu i instruktora), możliwość morsowania w Białej Lądeckiej, a poza sezonem 
-                zimowym: szlaki turystyczne do pieszych wędrówek, kilka szczytów Korony Gór Polski do zdobycia, 
-                skałki wspinaczkowe, trasy rowerowe, wędrówki nordic walking (tu również mogę pomóc w zorganizowaniu
-                instruktora i sprzętu), jazda konna w pobliskim ośrodku jeździeckim, sporty wodne na Zalewie Morawka, 
-                spływy pontonowe, dużo ciekawych miejsc do zwiedzania (m.in. Jaskinia Niedźwiedzia, kopalnia złota 
-                Złoty Stok, kopalnia uranu, twierdza Kłodzka, muzeum papiernictwa w Dusznikach Zdr. i wiele innych)<br/><br/><br/></p>
-            </div>
-            <img className='offer' id='photo_place' src='../../jaskinia.jpg'/>
-        </div>
-
-        <div className='place'>
-            <img className='offer' id='photo_place' src='../../inf3.webp'/>
-            <div id='place'>            
-            <p><br/><br/>Ważne jest dla mnie, abym nie przyczyniała się do nadmiernie szybkiego zużywania zasobów naszej 
-                planety, dlatego pościel nie jest prasowana (ale jest prana i suszona w wysokiej temperaturze),
-                woda czerpana ze studni głębinowej nadaje się do picia prosto z kranu - można więc nie kupować  
-                wody w plastikowych butelkach, będę Wam też wdzięczna za zwrócenie uwagi na segregację  śmieci
-                <br/><br/>Jeśli coś się zepsuje czy uszkodzi, dajcie proszę znać, znajdziemy zawsze jakieś rozwiązanie
-                <br/><br/>Wszelkie uwagi i sugestie mile widziane - chciałabym, aby to miejsce - stworzone z myślą o Was 
-                - było też po części Waszym dziełem i nieustannie wzbogacało się o nowe pomysły, które zawitają tu razem z Wami😊 
-                </p>
-            </div>
-        </div>
+            {
+                fileNames.map((fileName, index) => (
+                    <>
+                    <div className="place">
+                        <img id="photo_place" src={fileName[0]}/>
+                        <div id="place">
+                            <p id="title_galery">{place[index][0]}</p>
+                            <p>{opis[index][0]}</p>
+                            <a href={link[index][0]} target="_blank">{short_link[index][0]}</a>
+                        </div>
+                    </div>
+                    <div className="place">
+                        <div id="place">
+                            <p id="title_galery">{place[index][1]}</p>
+                            <p>{opis[index][1]}</p>
+                            <a href={link[index][1]} target="_blank">{short_link[index][1]}</a>
+                        </div>
+                        <img id="photo_place" src={fileName[1]}/>
+                    </div>
+                    </>
+                ))
+            }
         </div>
     )
 }
