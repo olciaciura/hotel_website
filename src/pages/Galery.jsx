@@ -1,63 +1,71 @@
 import React, {useEffect, useState} from "react";
 
+const imageUrls = {
+    'path1': '/galery_photos/domek',
+    'path2': '/galery_photos/środek',
+    'path3': '/galery_photos/otoczenie',
+    'path4': '/galery_photos/others'
+}
+
+const nrOfImages = { 
+    'path1': 14,
+    'path2': 13,
+    'path3': 22,
+    'path4': 17
+}
+
 export function Galery(){
 
     const [galeryState, setGaleryState] = useState('')
     const [bigPhoto, setBigPhoto] = useState({'id': null, 'fileName': null})
-
-    const path1 = '/galery_photos/domek'
-    const path2 = '/galery_photos/środek'
-    const path3 = '/galery_photos/otoczenie'
-    const path4 = '/galery_photos/others'
-
-    const nr_1 = 14
-    const nr_2 = 13
-    const nr_3 = 22
-    const nr_4 = 17
-
     const [fileNames1, setFileNames1] = useState([])
     const [fileNames2, setFileNames2] = useState([])
     const [fileNames3, setFileNames3] = useState([])
     const [fileNames4, setFileNames4] = useState([])
 
-    
-
     useEffect(() => {
-        let temp = []
-        for (let i = 0; i < nr_1; i++) {
-            let filename = path1 + '/image' + i + '.jpg';
-            temp.push(filename);
-        }
-        setFileNames1(temp)
+        preloadImages();
+    }, []);
 
-        temp = []
-        for (let i = 0; i < nr_2; i++){
-            let filename = path2 + '/image' + i + '.jpg';
-            temp.push(filename);
-        }
-        setFileNames2(temp)
-
-        temp = []
-        for (let i = 0; i < nr_3; i++){
-            let filename = path3 + '/image' + i + '.jpg';
-            temp.push(filename);
-        }
-        setFileNames3(temp)
-
-        temp = []
-        for (let i = 0; i < nr_4; i++){
-            let filename = path4 + '/image' + i + '.jpg';
-            temp.push(filename);
-        }
-        setFileNames4(temp)
-
-    }, [])
-
-
+    function preloadImages() {
+        Object.entries(imageUrls).forEach(([path, url]) => {
+          const numImages = nrOfImages[path];
+          let temp = [];
+    
+          for (let i = 0; i < numImages; i++) {
+            const imageUrl = `${url}/image${i}.jpg`;
+            temp.push(imageUrl);
+    
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = imageUrl;
+            link.as = 'image';
+    
+            document.head.appendChild(link);
+          }
+    
+          switch (path) {
+            case 'path1':
+              setFileNames1(temp);
+              break;
+            case 'path2':
+              setFileNames2(temp);
+              break;
+            case 'path3':
+              setFileNames3(temp);
+              break;
+            case 'path4':
+              setFileNames4(temp);
+              break;
+            default:
+              break;
+          }
+        });
+      }
 
     return(
         <div id='page'>
-            <p id='title_galery'>Chwila... Moment na zewnątrz</p>
+            <p id='title_galery'><span id='nazwa_bigger'>Chwila... Moment</span> na zewnątrz</p>
             <div className="images">
             {
                 fileNames1.map((fileName, index) => (
@@ -70,7 +78,7 @@ export function Galery(){
                 ))
             }
             </div>
-            <p id='title_galery'>Chwila... Moment wnętrze</p>
+            <p id='title_galery'><span id='nazwa_bigger'>Chwila... Moment</span>  wnętrze</p>
             <div className="images">
             {
                 fileNames2.map((fileName, index) => (
@@ -114,7 +122,7 @@ export function Galery(){
                 galeryState == 'big1' && <>
                             <div className="overlay">
                                 <button id="left" onClick={() => {
-                                    let index = ( bigPhoto.id + nr_1 - 1 ) % nr_1
+                                    let index = ( bigPhoto.id + nrOfImages['path1'] - 1 ) % nrOfImages['path1']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames1[index]
@@ -123,7 +131,7 @@ export function Galery(){
                                     setGaleryState('big1')
                                 }}>{'<'}</button>
                                 <button id="right" onClick={() => {
-                                    let index = ( bigPhoto.id + 1 ) % nr_1
+                                    let index = ( bigPhoto.id + 1 ) % nrOfImages['path1']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames1[index]
@@ -142,7 +150,7 @@ export function Galery(){
                 galeryState == 'big2' && <>
                             <div className="overlay">
                                 <button id="left" onClick={() => {
-                                    let index = ( bigPhoto.id + nr_2 - 1 ) % nr_2
+                                    let index = ( bigPhoto.id + nrOfImages['path2'] - 1 ) % nrOfImages['path2']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames2[index]
@@ -151,7 +159,7 @@ export function Galery(){
                                     setGaleryState('big2')
                                 }}>{'<'}</button>
                                 <button id="right" onClick={() => {
-                                    let index = ( bigPhoto.id + 1 ) % nr_2
+                                    let index = ( bigPhoto.id + 1 ) % nrOfImages['path2']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames2[index]
@@ -170,7 +178,7 @@ export function Galery(){
                 galeryState == 'big3' && <>
                 <div className="overlay">
                                 <button id="left" onClick={() => {
-                                    let index = ( bigPhoto.id + nr_3 - 1 ) % nr_3
+                                    let index = ( bigPhoto.id + nrOfImages['path3'] - 1 ) % nrOfImages['path3']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames3[index]
@@ -179,7 +187,7 @@ export function Galery(){
                                     setGaleryState('big3')
                                 }}>{'<'}</button>
                                 <button id="right" onClick={() => {
-                                    let index = ( bigPhoto.id + 1 ) % nr_3
+                                    let index = ( bigPhoto.id + 1 ) % nrOfImages['path3']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames3[index]
@@ -198,7 +206,7 @@ export function Galery(){
                 galeryState == 'big4' && <>
                 <div className="overlay">
                                 <button id="left" onClick={() => {
-                                    let index = ( bigPhoto.id + nr_4 - 1 ) % nr_4
+                                    let index = ( bigPhoto.id + nrOfImages['path4'] - 1 ) % nrOfImages['path4']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames4[index]
@@ -207,7 +215,7 @@ export function Galery(){
                                     setGaleryState('big4')
                                 }}>{'<'}</button>
                                 <button id="right" onClick={() => {
-                                    let index = ( bigPhoto.id + 1 ) % nr_4
+                                    let index = ( bigPhoto.id + 1 ) % nrOfImages['path4']
                                     let temp = {
                                         'id': index,
                                         'fileName': fileNames4[index]

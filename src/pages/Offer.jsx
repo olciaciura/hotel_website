@@ -84,8 +84,8 @@ export function Offer(){
             <p><br/><br/>Dla miłośników rowerów
             <br/>Asfaltem, drogą szutrową, polnymi skrótami – dwukierunkowo, jednokierunkowo, 
             z górki i pod górkę – po płaskim raczej rzadko😉 niezliczone możliwości i kilometry 
-            tras o różnym stopniu trudności. Zachęcam do poczytania opisów na stronie urzędu miasta 
-            https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html.
+            tras o różnym stopniu trudności. Zachęcam do poczytania opisów na stronie urzędu miasta&nbsp;
+            <a href="https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html" target="_blank">https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html</a>.
             <br/>W planach mam budowę osobnego, zamykanego pomieszczenia na rowery – wiem, 
             jakim oczkiem w głowie są dla Was te dwa kółka😊 Tymczasem, można je przechowywać w 
             przedsionku. Jeśli wolelibyście inaczej, możemy też poszukać innego rozwiązania.<br/><br/></p>

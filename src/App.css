@@ -343,7 +343,10 @@ img#photo:hover,img#photo:focus{
 #nazwa{
   font-family: 'Rage Italic', sans-serif;
   font-size: x-large;
-
+}
+#nazwa_bigger{
+  font-family: 'Rage Italic', sans-serif;
+  font-size: xxx-large;
 }
 
 #actual{
@@ -373,20 +376,6 @@ img#photo:hover,img#photo:focus{
   width: 100%;
   
 }
-.before_sepia{
-  filter: sepia(0%);
-  transition: filter 50s ease-in-out;
-}
-
-@keyframes sepia {
-  from {
-    filter: sepia(0%);
-  }
-  to {
-    filter: sepia(100%);
-  }
-}
-
 
 div.background_img{
   height: fit-content;
@@ -422,7 +411,15 @@ p#about_me{
   width: 100%;
   font-family: 'Segoe Print';
   font-size: medium;
+}
 
+a {
+  color: #017698;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 
 img#photo_place{
@@ -440,6 +437,7 @@ img#photo_place:hover{
 #place{
   width: 50%;
 }
+
 
 #place>p{
   margin-left: 5vw;
@@ -478,11 +476,6 @@ img#photo_place:hover{
 
 #place>ul>li{
   margin-bottom: 4px;
-}
-
-
-.offer#photo_place{
-  width: 50%; 
 }
 
 .tab{
@@ -529,6 +522,7 @@ tr#down>td{
 
 #regulamin{
   font-family: 'Segoe Print';
+  width: 50%;
 }
 
 #regulamin>p{
@@ -558,4 +552,60 @@ tr#down>td{
 .active{
   color: white !important;
   text-decoration: underline;
+}
+
+.container{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+    filter: sepia(0);
+  }
+  20% {
+    transform: translateX(0);
+    filter: sepia(100%);
+  }
+  25% {
+    transform: translateX(-100%);
+    filter: sepia(0);
+  }
+  45% {
+    transform: translateX(-100%);
+    filter: sepia(100%);
+  } 
+  50% {
+    transform: translateX(-200%);
+    filter: sepia(0);
+  }
+  70% {
+    transform: translateX(-200%);
+    filter: sepia(100%);
+  }
+  75% {
+    transform: translateX(-300%);
+    filter: sepia(0);
+  } 
+  95% {
+    transform: translateX(-300%);
+    filter: sepia(100%);
+  } 
+  100% {
+    transform: translateX(-400%);
+    filter: sepia(0);
+  } 
+}
+
+.wrapper>img{
+  width: 100%;
 }

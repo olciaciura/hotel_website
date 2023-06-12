@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-
 export function Home(){
-
-    useEffect(() => {
-        const background_img = document.querySelector('.before_sepia');
-        background_img.style.animation = 'sepia 20s forwards';
-    }, [])
 
     return(
         <div id='page'>
-            <div className="background_img" >
-                <img className='before_sepia' src={'../../main.png'}/> 
+        <div className='container'>
+            <div className="wrapper">
+                <img src='../../main.png'/>
+                <img src='../../main2.png'/>
+                <img src='../../main.png'/>
+                <img src='../../main2.png'/>
+                <img src='../../main.png'/>
             </div>
+        </div>
                 <p>Ciągle w biegu i niedoczasie… Czas pędzi… życie pędzi… i my też nieustannie pędzimy…
                 <br/><br/>
                 <span id='nazwa'> Chwila … Moment </span> to miejsce, które pozwoli Wam wyrwać się z tego codziennego wyścigu  i na Chwilę zatrzymać. Po co? Aby dostrzec i w pełni smakować ten krótki czas, Moment, który podarowaliście sobie na wspólne bycie z dziećmi, rodziną, przyjaciółmi czy znajomymi. 
