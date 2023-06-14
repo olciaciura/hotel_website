@@ -160,7 +160,7 @@ nav>ul>li>a:hover,nav>ul>li>a:focus{
 #title1{
   border-bottom: 1px solid #F7F7F01a;
   font-family: 'Rage Italic', sans-serif;
-  font-size: 25px;
+  font-size: xx-large;
   font-weight: 300;
   color: #F7F7F0;
   margin-top: 20px;
@@ -170,12 +170,13 @@ nav>ul>li>a:hover,nav>ul>li>a:focus{
 #title2{
   border-bottom: 1px solid #f7f7f01a;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: large;
   font-weight: 300;
   color: #F7F7F0;
   margin-top: 25px;
   margin-bottom: 15px;
   margin-left: 3%;
+  padding-bottom: 15px;
 }
 
 #page{
@@ -183,8 +184,6 @@ nav>ul>li>a:hover,nav>ul>li>a:focus{
   min-height: 70vh;
   width: 100%;
   background-color: #F7F7F0;
-    
-
 }
 
 #page>p{
@@ -347,6 +346,10 @@ img#photo:hover,img#photo:focus{
 #nazwa_bigger{
   font-family: 'Rage Italic', sans-serif;
   font-size: xxx-large;
+}
+#nazwa_large{
+  font-family: 'Rage Italic', sans-serif;
+  font-size: 30px;
 }
 
 #actual{
@@ -521,6 +524,9 @@ tr#down>td{
 }
 
 #regulamin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: 'Segoe Print';
   width: 50%;
 }
@@ -564,48 +570,36 @@ tr#down>td{
 .wrapper{
   width: 100%;
   display: flex;
-  animation: slide 20s infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-    filter: sepia(0);
-  }
-  20% {
-    transform: translateX(0);
-    filter: sepia(100%);
-  }
-  25% {
-    transform: translateX(-100%);
-    filter: sepia(0);
-  }
-  45% {
-    transform: translateX(-100%);
-    filter: sepia(100%);
-  } 
-  50% {
-    transform: translateX(-200%);
-    filter: sepia(0);
-  }
-  70% {
-    transform: translateX(-200%);
-    filter: sepia(100%);
-  }
-  75% {
-    transform: translateX(-300%);
-    filter: sepia(0);
-  } 
-  95% {
-    transform: translateX(-300%);
-    filter: sepia(100%);
-  } 
-  100% {
-    transform: translateX(-400%);
-    filter: sepia(0);
-  } 
 }
 
 .wrapper>img{
-  width: 100%;
+  animation: slide 10s infinite;
+}
+
+.wrapper img.active_img {
+  z-index: 1;
+}
+
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    filter: sepia(0);
+  }
+  20% {
+    opacity: 1;
+    filter: sepia(0%);
+  }
+  80% {
+    opacity: 1;
+    filter: sepia(100%);
+  }
+  100% {
+    opacity: 0;
+    filter: sepia(100%);
+  }
+}
+
+#larger_regulamin {
+  font-size: large;
 }

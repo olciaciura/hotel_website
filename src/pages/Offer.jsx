@@ -28,15 +28,15 @@ export function Offer(){
             <div id='place'>
                 <p><br/><br/>Układ pomieszczeń:</p>
                 <ul>
-                <li>- na dole: salon z aneksem kuchennym i jadalnią, łazienka, przedsionek (w salonie znajduje się rozkładana kanapa)</li>
-                <li>- na górze : dwie sypialnie (1 łóżko 140 cm, dwa łóżka 90 cm), garderoba</li>
+                <li>- na dole: salon z aneksem kuchennym i jadalnią, łazienka, przedsionek (w salonie znajduje się rozkładana kanapa);</li>
+                <li>- na górze : dwie sypialnie (1 łóżko 140 cm, dwa łóżka 90 cm), garderoba;</li>
                 </ul>
                 <p><br/>Wyposażenie kuchni: </p>
                 <ul>
-                <li>- lodówka, zmywarka, płyta indukcyjna 2 palnikowa, czajnik, kawiarka włoska</li>
-                <li>- naczynia, sztućce, garnki i drobne sprzęty do gotowania</li>
+                <li>- lodówka, zmywarka, płyta indukcyjna 2 palnikowa, czajnik, kawiarka włoska;</li>
+                <li>- naczynia, sztućce, garnki i drobne sprzęty do gotowania;</li>
                 </ul>
-                <p><br/>Ogrzewanie podłogowe w całym domu</p>
+                <p><br/>Ogrzewanie podłogowe w całym domu;</p>
                 <br/><br/>
             </div>
             <img className='offer' id='photo_place' src='../../kuchnia.jpg'/>
@@ -48,15 +48,15 @@ export function Offer(){
             <p><br/><br/>Nie ma telewizji, ani telewizorów. W zamian oddaję  do Waszej dyspozycji książki, 
                 mapy i przewodniki planszówki, kredki i rysowanki, materiały plastyczne, możliwość udostępnienia 
                 różnych sprzętów przydatnych do wspólnego spędzania czasu, np. rzutnika, gitary, śpiewników, 
-                przyczepki rowerowej dla  dzieci, sanek, piłek, badmintona, itp.
+                przyczepki rowerowej dla  dzieci, sanek, piłek, badmintona, itp.;
                 <br/><br/>Na zewnątrz duży taras, który pozwala spędzać czas na dworze w pogodę i niepogodę, 
                 teren zielony z miejscem na ognisko, hamaki i leżaki do wylegiwania się nad brzegiem rzeki;
                 <br/><br/>Na wiosnę ruszy własny ogródek i zielnik – jeśli macie zacięcie ogrodnicze do 
                 grzebania w grządkach i potrzebę kontaktu z ziemią  - zapraszam do własnoręcznego siania i 
-                sadzenia roślinek, dla dzieciaków może to być super zabawa
+                sadzenia roślinek, dla dzieciaków może to być super zabawa;
                 <br/><br/>Ja sama uwielbiam różnorakie rękodzieło i czasami organizuję warsztaty rękodzieła – 
                 decoupage, filcowanie, wyrób świeczek, wypieki – przy grupie kilku osób (małych i dużych) 
-                możemy się na takie spotkanie z rękodziełem umówić
+                możemy się na takie spotkanie z rękodziełem umówić;
                 <br/><br/><br/></p>
             </div>
             </div>
@@ -67,15 +67,15 @@ export function Offer(){
                     ośrodkach narciarskich po polskiej i czeskiej stronie, kilkadziesiąt kilometrów tras 
                     narciarstwa biegowego (jeśli jeszcze nie próbowaliście tego sportu zachęcam z całego serca, 
                     z chęcią pomogę w zorganizowaniu sprzętu i instruktora), możliwość morsowania w Białej Lądeckiej, 
-                    a poza sezonem zimowym : szlaki turystyczne do pieszych wędrówek, kilka szczytów Korony Gór 
+                    a poza sezonem zimowym: szlaki turystyczne do pieszych wędrówek, kilka szczytów Korony Gór 
                     Polski do zdobycia, skałki wspinaczkowe, trasy rowerowe, wędrówki nordic walking (tu również 
                     mogę pomóc w zorganizowaniu instruktora i sprzętu), jazda konna w pobliskim ośrodku jeździeckim, 
                     sporty wodne na Zalewie Morawka, spływy pontonowe, dużo ciekawych miejsc do zwiedzania 
                     (m.in. Jaskinia Niedźwiedzia, kopalnia złota Złoty Stok, kopalnia uranu, twierdza Kłodzka, 
                     muzeum papiernictwa w Dusznikach Zdr. i wiele innych); Więcej szczegółowych informacji w 
-                    zakładce „Okolica”.<br/><br/><br/></p>
+                    zakładce „Przydatne informacje”.<br/><br/><br/></p>
             </div>
-            <img className='offer' id='photo_place' src='../../okolica2.png'/>
+            <img className='offer' id='photo_place' src='../../okolica2.jpg'/>
         </div>
 
         <div className='place'>

@@ -39,7 +39,7 @@ export function Cennik(){
         </div>
 
             <p>
-            <br/><span id='bigger'>Ale jak to w życiu bywa – zawsze są wyjątki od reguły, więc warto dzwonić i dopytać</span>
+            <br/><span id='bigger'>Ale jak to w życiu bywa – zawsze są wyjątki od reguły, więc warto dzwonić i dopytać.</span>
             <br/><br/> Pobyt rozpoczyna się o godzinie 16.00, a kończy o 10.00 – jeśli jest potrzeba ustalenia innego przedziału czasowego – proszę o kontakt.
             <br/>Rezerwacja zostaje potwierdzona po wpłacie zaliczki w wysokości 30% ceny za cały pobyt. Zaliczka jest bezzwrotna, jeśli rezerwacja zostanie anulowana ma mniej niż 21 dni przed planowanym terminem przyjazdu.
             <br/>Pozostałą część należności za pobyt proszę uregulować przelewem do dnia przyjazdu (liczy się data wpływu na konto bankowe).

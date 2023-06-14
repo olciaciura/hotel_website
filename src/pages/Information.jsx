@@ -8,13 +8,13 @@ export function Information(){
             <p id='information'>Przydatne informacje</p>
         </div>
         <p>
-            Jeśli zastanawiacie się jak można aktywnie spędzić czas, tutaj znajdziecie kilka 
+            Jeśli zastanawiacie się, jak można aktywnie spędzić czas, tutaj znajdziecie kilka 
             podpowiedzi - w zależności od zainteresowań, pogody i czasu, parę linków, które 
-            mogą się przydać w podjęciu decyzji
+            mogą się przydać w podjęciu decyzji:
         </p>
 
         <div className='place'>   
-            <img className='offer' id='photo_place' src='../../okolica.jpg'/>
+            <img className='offer' id='photo_place' src='../../regulamin1.jpg'/>
             <div id='regulamin'>            
                 <p><b>Stronie Śląskie i najbliższa okolica</b>
                 <br/><a href='https://www.niesamowitapolska.eu/polecane-miasta/stronie-slaskie-atrakcje' target='_blank'>Ogólnie o atrakcjach w okolicy</a>
@@ -24,7 +24,7 @@ export function Information(){
                 <br/><a href='https://stronie.pl/100/galeria-na-szlaku.html' target='_blank'>Galeria na Szlaku</a>
                 <br/><a href='https://www.uireny.pl/s/pl/82/wapiennik-laskawy-kamien-stara-morawa' target='_blank'>Wapiennik</a>
                 <br/><a href='https://wakacjezdzieciakiem.pl/polska/dolnoslaskie/634-stara-morawa-zalew-z-plaza.html' target='_blank'>Zalew Stara Morawa</a>
-                <br/> od maja do września – jarmark lokalnych produktów w Nowym Gierałtowie (plac wiejski) – rękodzieło, lokalne wypieki (chleb, ciasta), lokalne wędliny, itp.
+                <br/> od maja do września – jarmark lokalnych produktów w Nowym Gierałtowie (plac wiejski) – rękodzieło, lokalne wypieki (chleb, ciasta), lokalne wędliny, jajka, mleko, sery itp.
                 </p>
             </div>
         </div>

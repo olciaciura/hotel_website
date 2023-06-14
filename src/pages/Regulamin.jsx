@@ -6,12 +6,12 @@ export function Regulamin(){
         <div className='black_header'>
             <p id='information'>NIE regulamin</p>
         </div>
-        <p>
+        <p><span id='larger_regulamin'>
             Na samo słowo „regulamin” dostaję gęsiej skórki i moja wolna, niesforna dusza cierpi….
             <br/>Tak więc, nie o regulamin tu chodzi, a o umowę pomiędzy nami – tak po prostu i po ludzku: 
             Wiecie na pewno jak to jest, jak długo się o czymś marzy, wkłada wiele wysiłku, żeby to marzenie 
             zrealizować, wyczekuje z niecierpliwością czasu, kiedy to spełnienie w końcu nadejdzie….
-            <span id='nazwa'> Chwila … Moment </span> jest właśnie takim marzeniem, niedawno spełnionym, 
+            <span id='nazwa_large'> Chwila … Moment </span> jest właśnie takim marzeniem, niedawno spełnionym, 
             otwierającym drogę do kolejnych, które mam nadzieję, już za niedługo zaczną się realizować 😊
             <br/><br/>„Wypieszczone” i „wychuchane” – jak to określili moi znajomi, a przede wszystkim 
             przygotowane z myślą o Was, moich Gościach, abyście się tu czuli, jak u siebie – przytulnie 
@@ -22,7 +22,7 @@ export function Regulamin(){
             można poprawić czy usprawnić 😊 Jeśli coś się uszkodzi/zepsuje, dajcie proszę znać, żebym mogła 
             temu zaradzić, przed przyjazdem następnych gości.
             <br/><br/>Z pełnym zaufaniem, oddaję Chwilę…Moment pod Waszą opiekę!
-            <br/><br/><span id='do_prawej'>Jola</span> <br/>
+            <br/><br/><span id='do_prawej'>Jola</span> <br/></span>
         </p>
 
         <div className='place'>     
