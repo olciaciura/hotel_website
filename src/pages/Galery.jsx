@@ -10,8 +10,8 @@ const imageUrls = {
 const nrOfImages = { 
     'path1': 14,
     'path2': 13,
-    'path3': 22,
-    'path4': 17
+    'path3': 99,
+    'path4': 69
 }
 
 export function Galery(){

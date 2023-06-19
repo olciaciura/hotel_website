@@ -14,7 +14,7 @@ export function Information(){
         </p>
 
         <div className='place'>   
-            <img className='offer' id='photo_place' src='../../regulamin1.jpg'/>
+            <img className='offer' id='photo_place' src='../../information/regulamin1.jpg'/>
             <div id='regulamin'>            
                 <p><b>Stronie Śląskie i najbliższa okolica</b>
                 <br/><a href='https://www.niesamowitapolska.eu/polecane-miasta/stronie-slaskie-atrakcje' target='_blank'>Ogólnie o atrakcjach w okolicy</a>
@@ -24,32 +24,28 @@ export function Information(){
                 <br/><a href='https://stronie.pl/100/galeria-na-szlaku.html' target='_blank'>Galeria na Szlaku</a>
                 <br/><a href='https://www.uireny.pl/s/pl/82/wapiennik-laskawy-kamien-stara-morawa' target='_blank'>Wapiennik</a>
                 <br/><a href='https://wakacjezdzieciakiem.pl/polska/dolnoslaskie/634-stara-morawa-zalew-z-plaza.html' target='_blank'>Zalew Stara Morawa</a>
-                <br/> od maja do września – jarmark lokalnych produktów w Nowym Gierałtowie (plac wiejski) – rękodzieło, lokalne wypieki (chleb, ciasta), lokalne wędliny, jajka, mleko, sery itp.
+                <br/><br/> od maja do września – jarmark lokalnych produktów w Nowym Gierałtowie (plac wiejski) – rękodzieło, lokalne wypieki (chleb, ciasta), lokalne wędliny, jajka, mleko, sery itp.
                 </p>
             </div>
         </div>
         <div className='place'>   
-            <div id='regulamin'>            
-                <p><b>Kletno</b>
+            <div className='two_photos_horizontal'>            
+                <p id='column'><b>Kletno</b>
                 <br/><a href='http://jaskinianiedzwiedzia.pl/' target='_blank'>Jaskina Niedźwiedzia</a>
-                <br/><a href='https://www.muzeum-kletno.pl/' target='_blank'>Muzeum</a>
+                <br/><a href='https://www.muzeum-kletno.pl/' target='_blank'>Muzeum geologiczne</a>
                 <br/><a href='https://www.kletno.pl/' target='_blank'>Kopalnia uranu</a>
                 <br/><a href='https://park.kletno.pl/oferta/' target='_blank'>Park linowy</a>
-                <br/><br/><b>Lądek Zdrój</b>
+                <br/><br/><b>Lądek Zdrój i okolice</b>
                 <br/><a href='https://jaskiniaradochowska.pl/' target='_blank'>Jaskinia Radochowska</a>
                 <br/><a href='https://hasajacezajace.com/trojak-gory-zlote-ladek-zdroj/' target='_blank'>Trojak – stok narciarski, skałki wspinaczkowe, turystyka piesza</a>
                 <br/><a href='https://skifamily.pl/' target='_blank'>stok narciarski</a>
                 <br/><a href='https://www.goryonline.com/przewodnik-skalki-ladeckie-,2008116,i.html' target='_blank'>skałki wspinaczkowe</a>
-                <br/><br/><a href='https://www.zameknaskale.com.pl/zwiedzanie-zamku/' target='_blank'>Trzebieszowice - Zamek na Skale</a>
-                <br/><a href='https://www.niesamowitapolska.eu/wojewodztwa/dolnoslaskie/ziemia-klodzka/atrakcje/kopalnia-zlota-w-zlotym-stoku' target='_blank'>Złoty Stok - Kopalnia złota</a>
+                <br/><a href='https://www.zameknaskale.com.pl/zwiedzanie-zamku/' target='_blank'>Trzebieszowice - Zamek na Skale</a>
+                <br/><br/><b>Złoty stok</b>
+                <br/><a href='https://www.niesamowitapolska.eu/wojewodztwa/dolnoslaskie/ziemia-klodzka/atrakcje/kopalnia-zlota-w-zlotym-stoku' target='_blank'>Kopalnia złota</a>
                 </p>
-            </div>
-            <img className='offer' id='photo_place' src='../../okolica.jpg'/>
-        </div>
-        <div className='place'>   
-            <img className='offer' id='photo_place' src='../../okolica.jpg'/>
-            <div id='regulamin'>            
-                <p><a href='https://www.niesamowitapolska.eu/wojewodztwa/dolnoslaskie/ziemia-klodzka/atrakcje/twierdza-klodzko-atrakcje' target='_blank'>Kłodzko</a>
+                <p id='column'><b>Miejscowości, do których warto zajrzeć</b>
+                <br/><a href='https://www.niesamowitapolska.eu/wojewodztwa/dolnoslaskie/ziemia-klodzka/atrakcje/twierdza-klodzko-atrakcje' target='_blank'>Kłodzko</a>
                 <br/><a href='https://www.niesamowitapolska.eu/wojewodztwa/dolnoslaskie/ziemia-klodzka/atrakcje/szlak-ginacych-zawodow' target='_blank'>Kudowa Zdrój</a>
                 <br/><a href='https://podroze.onet.pl/polska/dolnoslaskie/duszniki-zdroj-atrakcje-turystyczne-co-warto-zobaczyc-ciekawe-miejsca/4s1p97s' target='_blank'>Duszniki Zdrój</a>
                 <br/><a href='https://palacmarianny.com.pl/informacje/' target='_blank'>Kamieniec Ząbkowicki</a>
@@ -60,19 +56,31 @@ export function Information(){
                 <br/><a href='https://www.dolnimorava.cz/pl/pomysly-na-wycieczki' target='_blank'>Inne pomysły na wycieczki</a>
                 </p>
             </div>
+            <div className='two_photos_horizontal'>
+                <img className='offer' id='photo_place' src='../../information/regulamin21.jpg'/>
+                <img className='offer' id='photo_place' src='../../information/regulamin22.jpg'/>
+            </div> 
         </div>
+
         <div className='place'>   
+            <div className='two_photos_vertical'>
+                <img className='offer' id='photo_place' src='../../information/regulamin31.jpg'/>
+                <img className='offer' id='photo_place' src='../../information/regulamin32.jpg'/>
+            </div> 
             <div id='regulamin'>            
-                <p><b>Trasy rowerowe</b>
-                <br/><a href='https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html' target='_blank'>https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html</a>
-                <br/><a href='https://czarnagora.pl/mapa_letnia/' target='_blank'>https://czarnagora.pl/mapa_letnia/</a>
-                <br/><br/><a href='https://stronie.pl/4166/mapy-opisy-qrkody-tras.html' target='_blank'>Trasy narciarstwa biegowego</a>
+            <p><b>Trasy rowerowe</b>
+                <br/><a href='https://stronie.pl/538/szlaki-rowerowe-singletracki-bike-park.html' target='_blank'>Stronie Śląskie</a>
+                <br/><a href='https://czarnagora.pl/mapa_letnia/' target='_blank'>Czarna Góra</a>
+                <br/><br/><b>Narty biegowe</b>
+                <br/><a href='https://stronie.pl/4166/mapy-opisy-qrkody-tras.html' target='_blank'>Stronie Śląskie</a>
                 <br/><br/><b>Narty zjazdowe</b>
                 <br/><a href='https://skifamily.pl/' target='_blank'>Kamienica/Lądek Zdrój </a>
                 <br/><a href='https://www.skiinfo.pl/dolnoslaskie/czarna-gora/osrodek-narciarski' target='_blank'>Czarna Góra</a>
-                <br/><a href='https://www.wyciagwbielicach.pl/' target='_blank'>Bielice</a></p>
+                <br/><a href='https://www.wyciagwbielicach.pl/' target='_blank'>Bielice</a>
+                <br/><a href='https://www.chatanovaseninka.cz/pl/tipy-na-vylet-v-zime' target='_blank'>Czechy Paprsek/Kuncice </a>
+                
+            </p>
             </div>
-            <img className='offer' id='photo_place' src='../../okolica.jpg'/>
         </div>
         </div>
     )
