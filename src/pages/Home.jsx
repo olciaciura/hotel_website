@@ -5,7 +5,7 @@ export function Home(){
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-          setActiveIndex((prevIndex) => (prevIndex + 1) % 3);
+          setActiveIndex((prevIndex) => (prevIndex + 1) % 2);
         }, 10000);
     
         return () => clearTimeout(timeout);
@@ -14,17 +14,16 @@ export function Home(){
     return(
         <div id='page'>
         <div className='container'>
-
-      <div className='wrapper'>
-        <img
-          src={activeIndex === 0 ? '../../home/main.png' : activeIndex === 1 ? '../../home/main2.png' : '../../home/main3.png'}
-          alt='First Image'
-        />
-      </div>
-    </div>
+          <div className='wrapper'>
+            <img
+              src={activeIndex === 0 ? '../../home/main.png' :  '../../home/main2.png' }
+              alt='Image'
+            />
+          </div>
+        </div>
                 <p><span id='bigger'>Ciągle w biegu i niedoczasie… Czas pędzi… życie pędzi… i my też nieustannie pędzimy…
                 <br/><br/>
-                <span id='nazwa_large'> Chwila … Moment </span> to miejsce, które pozwoli Wam wyrwać się z tego codziennego wyścigu  i na Chwilę zatrzymać. Po co? Aby dostrzec i w pełni smakować ten krótki czas, Moment, który podarowaliście sobie na wspólne bycie z dziećmi, rodziną, przyjaciółmi czy znajomymi. 
+                <span id='nazwa_large'> Chwila… Moment </span> to miejsce, które pozwoli Wam wyrwać się z tego codziennego wyścigu  i na Chwilę zatrzymać. Po co? Aby dostrzec i w pełni smakować ten krótki czas, Moment, który podarowaliście sobie na wspólne bycie z dziećmi, rodziną, przyjaciółmi czy znajomymi. 
                 <br/>W życiu piękne są tylko chwile – tak śpiewał kiedyś Dżem, a ja tworząc dla Was „Chwilę… Moment”, miałam w głowie jeszcze inną myśl: <i>w życiu Ważne są tylko chwile…</i>.
                 <br/><br/>Tak więc, zapraszam Was do miejsca – gdzie czas może się na chwilę zatrzymać … 
                 <br/>Łapcie Momenty i Chwile wspólnie spędzone, zauważcie je, doceńcie, cieszcie się nimi - niech zostaną z Wami jak najdłużej! 

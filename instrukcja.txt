@@ -1,0 +1,64 @@
+INSTRUKCJA EDYCJI STRONY
+
+Aby sprawdzić jak wygląda strona należy wejść w przeglądarce plików do katalogu projektu (u mnie to hotel_website), 
+na górze (tam gdzie jest napisana ściezka do pliku) wpisac 'cmd' - otworzy się terminal (oczywiście terminal mozna otworzyc inaczej,
+tu podpowiadam jak najłatwiej w dobre miejsce). W terminalu wpisac 'npm i' - po skończeniu instalacji, wpisac 'npm run dev' - wyświetli
+się adres prawdopodobnie http://localhost:5173/ - cyfry na końcu moga byc inne. Wklejamy ten adres w przeglądarke i mamy podgląd na żywo.
+
+Po skończeniu wszystkich zmian należyw teminalu w katalogu (u mnie hotel_website) wpisać 'npx vite build' - zostanie stworzony katalog
+dist. Całą zawartośc tego katalogu nalezy wrzucić na serwer.
+
+Wszystkie teksty są formatowane jako html - w znacznikach <p>tu tekst</p> wstawiamy tekst, 
+w celu formatowania <br/> - nowa linijka, <b>pogrubiony tekst</b>, <span id='nazwa'>nazwa hotelu</span>, 
+<span id='nazwa_large'>średniej wielkości nazwa hotelu</span>, <span id='nazwa_bigger'>duża nazwa hotelu</span>, 
+<span id='bigger'>powiększony tekst</span>. W każdym pliku teksty sa w takiej samej kolejnosci i tak samo 
+podzielone jak na stronie, również zdjęcia są w tej samej kolejności. 
+
+1. STOPKA 
+Do zmiany danych w stopce należy zmienić w pliku src/components/footer.jsx
+
+2. HOME
+Tekst zmieniać w pliku src/pages/Home.jsx
+
+3. OFERTA
+Tekst zmieniać w pliku src/pages/Offer.jsx 
+
+4. CENNIK
+Tekst zmieniać w pliku src/pages/Cennik.jsx.
+
+5. PRZYDATNE INFORMACJE
+Tekst zmieniać w pliku src/pages/Information.jsx
+
+6. NASZA UMOWA
+Tekst zmieniać w pliku src/pages/Regulamin.jsx
+
+7. GALERIA
+Zmieniać w pliku src/pages/Regulamin.jsx
+Zdjęcia są w 4 katalogach w katalogu public/galery_photos - wnętrze w katalogu /środek (path 2), domek z zewnatrz w /domek (path1), okolica w /otoczenie (path3, 
+'uchwycone chwile i momenty' w /others (path4). W kazdym folderze plik są nazwane image0.jpg, image1.jpg ... 
+Do zrobienia w folderach:
+W celu usunięcia zdjęcia - należy usunąć wybrane zdjecie oraz poprawić numeracje kolejnych zdjęć - tak, aby w numeracji nie było przerwy. 
+W celu zamiany, usuwamy stary plik i dodajemy nowy o tej samej nazwie. W celu dodania nowego zdjęcia dodajemy zdjecie i nazwyamy je image{numer}.jpg
+o numerze o jeden większy niż największy w katalogu. 
+Do zrobienia w pliku:
+W celu usunięcia zdjęcia - należy zminiejszyć o jeden const nrOfImages = { 
+    'path1': 14,
+    'path2': 13,
+    'path3': 99,
+    'path4': 69
+} liczbę od odpowiadającej path (podane wyżej w nawiasach). W celu dodania nowego zdjęcia, należy zmienić liczbę od odpowiedniego path. Przy zamianie
+jedno zdjęcie za jedno nie trzeba zmieniać nic w pliku.
+
+Zdjęcia na stronie są wyświetlane zgodnie z kolejnością numeracji nazw plików. Dlatego jeśli chcemy zmienić kolejnosć wyświelanych plików wystarczy odpowiednio
+zmienić nazwy. WAŻNE: po zmianie sprawdzić czy na pewno numeracja nazw jest od 0, co jeden, bez przerw. 
+
+8. ZDJECIA NA STRONIE
+Żeby zmienić dowolne zdjęcie/logo ustawione na sztywno na stronie należy znaleźć w pliku odpowiedniej zakładki (wymienione jak wyżej), 
+które to zdjecie oraz w jakim katalogu się znajduje (w większosci nazwa katalogu jest taka sama jak pliku) oraz zapisać w tym samym 
+miejscu o tej samej nazwie (oczywiście najpierw usunąć stare). WAŻNE - dobrze jakby były tej samej wielkości, będzie mniejsza szansa,
+że strona 'się rozjedzie'. W przypadku zdjęć panoramicznych - dobrze gdyby na szerokość miały min ok 1000px.
+
+9. LINKI
+W celu zmiany linka na stronie należy znaleźć w tekście znacznik <a href="link" target="_blank">tekst wyswietlany na stronie</a> i tu można zmienić
+link wklejając jako "link" nową ścieżke, a jako tekst wyswietlany na stronie, tekst który chcemy żeby był napisany.
+

@@ -29,7 +29,7 @@ export function Information(){
             </div>
         </div>
         <div className='place'>   
-            <div className='two_photos_horizontal'>            
+            <div className='two_photos_horizontal' id="to_mobile_ver">            
                 <p id='column'><b>Kletno</b>
                 <br/><a href='http://jaskinianiedzwiedzia.pl/' target='_blank'>Jaskina Niedźwiedzia</a>
                 <br/><a href='https://www.muzeum-kletno.pl/' target='_blank'>Muzeum geologiczne</a>

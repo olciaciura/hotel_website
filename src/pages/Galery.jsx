@@ -65,7 +65,7 @@ export function Galery(){
 
     return(
         <div id='page'>
-            <p id='title_galery'><span id='nazwa_bigger'>Chwila... Moment</span> na zewnątrz</p>
+            <p id='title_galery'><span id='nazwa_bigger'>Chwila...Moment</span> na zewnątrz</p>
             <div className="images">
             {
                 fileNames1.map((fileName, index) => (
@@ -78,7 +78,7 @@ export function Galery(){
                 ))
             }
             </div>
-            <p id='title_galery'><span id='nazwa_bigger'>Chwila... Moment</span>  wnętrze</p>
+            <p id='title_galery'><span id='nazwa_bigger'>Chwila...Moment</span>  wnętrze</p>
             <div className="images">
             {
                 fileNames2.map((fileName, index) => (

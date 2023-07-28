@@ -6,6 +6,7 @@ const ScrollToTop = (props) => {
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo(0, 0);
+      props.setPage(false);
     }
   }, [location]);
 

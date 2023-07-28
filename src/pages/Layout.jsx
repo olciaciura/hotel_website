@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
 import { Link } from "react-router-dom";
 
-function Layout() {
+function Layout(props) {
 
     const [jumpedToFooter, setJumpedToFooter] = useState(false)
 
@@ -27,7 +27,7 @@ function Layout() {
                         <img className="logo" src='../../logo.png' alt='logo'/>
                     </Link>
                 </div>
-                <Navbar setJumpedToFooter={setJumpedToFooter} />
+                <Navbar setJumpedToFooter={setJumpedToFooter} setPage={props.setPage} page={props.page}/>
             </div>
         </div>
         <div id='app-body'>

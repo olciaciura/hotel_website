@@ -24,7 +24,7 @@ export function Cennik(){
                 <tbody>
                     <tr>
                         <td id='left_col'>Sezon "wysoki" - ferie zimowe, wakacje letnie</td>
-                        <td id='right_col'>min 7 nocy (od soboty do soboty)</td>
+                        <td id='right_col'>min 3 nocy (od soboty do soboty)</td>
                     </tr>
                     <tr>
                         <td id='left_col'>Święta, długie weekendy</td>
